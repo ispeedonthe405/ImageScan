@@ -71,7 +71,12 @@ namespace ImageScan.Core
                             it.Begin();
                             do
                             {
-                                output += it.GetText(pgLevel) + Environment.NewLine;
+                                string line = it.GetText(pgLevel);
+                                if (!string.IsNullOrWhiteSpace(line))
+                                {
+                                    output += line + Environment.NewLine;
+                                }
+                                //output += it.GetText(pgLevel) + Environment.NewLine;
                             } while (it.Next(pgLevel));
                         }
                     }
