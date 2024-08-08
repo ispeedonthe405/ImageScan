@@ -1,2 +1,2 @@
 # ImageScan
-Simple OCR
+Simple OCR using the Tesseract engine
